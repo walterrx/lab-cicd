@@ -8,7 +8,7 @@ public class HelloController {
 
     @GetMapping
     public String hello() {
-        return "It's working!";
+        return "It's working, now with WebHook!";
     }
 
 }
