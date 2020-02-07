@@ -14,10 +14,19 @@ pipeline {
     }
 	post {
 		success {
-			githubNotify status: "SUCCESS", credentialsId: "github", account: "prof-eduardo-galego", repo: "lab-cicd"
+			githubNotify status: "SUCCESS", 
+						 credentialsId: "github", 
+						 account: "prof-eduardo-galego", 
+						 repo: "lab-cicd",
+						 description: "Sucesso"
+						 
         }
         failure {
-            githubNotify status: "FAILURE", credentialsId: "github", account: "prof-eduardo-galego", repo: "lab-cicd"
+            githubNotify status: "FAILURE", 
+						 credentialsId: "github", 
+						 account: "prof-eduardo-galego", 
+						 repo: "lab-cicd",
+						 description: "Erro"
         }
     }
 }
