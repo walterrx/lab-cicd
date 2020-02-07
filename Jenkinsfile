@@ -12,4 +12,12 @@ pipeline {
             }
         }
     }
+	post {
+		success {
+			githubNotify status: "SUCCESS", credentialsId: "github", account: "prof-eduardo-galego", repo: "lab-cicd"
+        }
+        failure {
+            githubNotify status: "FAILURE", credentialsId: "github", account: "prof-eduardo-galego", repo: "lab-cicd"
+        }
+    }
 }
